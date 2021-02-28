@@ -1,5 +1,7 @@
 import React from 'react';
-import styled, { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
+import '@fontsource/poppins';
+import theme from '../theme';
 
 const GlobalStyle = createGlobalStyle`
 html {
@@ -10,12 +12,26 @@ html {
 
 *, *:before, *:after {
   box-sizing: inherit;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body, h1, h2, h3, h4, h5, h6, p, ol, ul {
   margin: 0;
   padding: 0;
   font-weight: normal;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-size: 1rem;
+}
+
+p {
+    margin: 0;
 }
 
 ol, ul {
@@ -33,7 +49,9 @@ const Layout: React.FC = ({ children }) => {
   return (
     <>
       <GlobalStyle />
-      <LayoutContainer>{children}</LayoutContainer>
+      <ThemeProvider theme={theme}>
+        <LayoutContainer>{children}</LayoutContainer>
+      </ThemeProvider>
     </>
   );
 };

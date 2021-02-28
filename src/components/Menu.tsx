@@ -1,21 +1,27 @@
 import React from 'react';
 import styled from 'styled-components';
 
+const MenuContainer = styled.nav`
+  display: flex;
+`;
+
 const MenuButton = styled.button`
   text-transform: uppercase;
-  border: none;
-  background: none;
   color: #000;
-  font-size: 1rem;
+  font-weight: 600;
+  padding: 0 1vw;
+  &:first-child {
+    padding-left: 0;
+  }
 `;
 
 const Menu = () => {
   return (
-    <div>
+    <MenuContainer aria-labelledby='primary menu navigation'>
       <MenuButton>Inicio</MenuButton>
       <MenuButton>Productos</MenuButton>
       <MenuButton>Contacto</MenuButton>
-    </div>
+    </MenuContainer>
   );
 };
 
