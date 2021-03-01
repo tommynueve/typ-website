@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useMediaQuery } from 'react-responsive';
 
 import Menu from '../components/Menu';
 import SocialMenu from '../components/SocialMenu';
@@ -33,12 +34,19 @@ const HeadingMainContent = styled.div`
 `;
 
 const Heading = () => {
+  const isMobile = useMediaQuery({ maxWidth: 767 });
+
   return (
     <header>
       <NavbarContainer>
-        {/* <Menu /> */}
-        <HambMenu />
-        <SocialMenu />
+        {isMobile ? (
+          <HambMenu />
+        ) : (
+          <>
+            <Menu />
+            <SocialMenu />
+          </>
+        )}
       </NavbarContainer>
       <Logo src={logoImg} alt='logo typ' />
       <HeadingMainContent>
