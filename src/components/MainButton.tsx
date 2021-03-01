@@ -9,7 +9,10 @@ const Button = styled.button<{ variant: VariantType }>`
   color: ${({ variant, theme }) => (variant === 'primary' ? '#fff' : theme.main)};
   border: 2px solid ${({ theme }) => theme.main};
   border-radius: 2rem;
-  padding: 0.8rem 1.5rem;
+  padding: 0.5rem 0.5rem;
+  @media screen and (min-width: 769px) {
+    padding: 0.8rem 1.5rem;
+  }
 `;
 
 interface Props {

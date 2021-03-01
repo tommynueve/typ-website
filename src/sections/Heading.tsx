@@ -22,10 +22,14 @@ const Logo = styled.img`
   top: -50px;
 `;
 
+const MainTextContainer = styled.div`
+  width: 45%;
+`;
+
 const MainImageContainer = styled.div`
   top: -5vw;
   position: relative;
-  max-width: 55%;
+  width: 55%;
 `;
 
 const HeadingMainContent = styled.div`
@@ -50,10 +54,18 @@ const Heading = () => {
       </NavbarContainer>
       <Logo src={logoImg} alt='logo typ' />
       <HeadingMainContent>
-        <HeadingText />
-        <MainImageContainer>
-          <img src={cartuchosImg} alt='imagen de cartuchos en la portada' width='100%' />
-        </MainImageContainer>
+        {!isMobile ? (
+          <>
+            <MainTextContainer>
+              <HeadingText />
+            </MainTextContainer>
+            <MainImageContainer>
+              <img src={cartuchosImg} alt='imagen de cartuchos en la portada' width='100%' />
+            </MainImageContainer>
+          </>
+        ) : (
+          <HeadingText isMobile />
+        )}
       </HeadingMainContent>
     </header>
   );
