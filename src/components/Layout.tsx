@@ -28,6 +28,9 @@ button {
     border: none;
     background: none;
     font-size: 1rem;
+    &:focus {
+      outline: none;
+    }
 }
 
 p {

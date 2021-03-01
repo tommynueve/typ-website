@@ -6,6 +6,7 @@ import SocialMenu from '../components/SocialMenu';
 import logoImg from '../images/logo.svg';
 import HeadingText from '../components/HeadingText';
 import cartuchosImg from '../images/cartuchos.png';
+import HambMenu from '../components/HambMenu';
 
 const NavbarContainer = styled.div`
   display: flex;
@@ -35,7 +36,8 @@ const Heading = () => {
   return (
     <header>
       <NavbarContainer>
-        <Menu />
+        {/* <Menu /> */}
+        <HambMenu />
         <SocialMenu />
       </NavbarContainer>
       <Logo src={logoImg} alt='logo typ' />
