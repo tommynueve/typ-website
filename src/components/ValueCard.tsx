@@ -4,11 +4,14 @@ import styled from 'styled-components';
 interface Props {
   title: string;
   body: string;
+  iconPath?: string;
+  iconAlt?: string;
 }
 
-const ValueCard: React.FC<Props> = ({ title, body }) => {
+const ValueCard: React.FC<Props> = ({ title, body, iconPath, iconAlt }) => {
   return (
     <Container>
+      <CardIcon src={iconPath} alt={iconAlt} />
       <CardTitle>{title}</CardTitle>
       <CardBody>{body}</CardBody>
     </Container>
@@ -22,6 +25,11 @@ const Container = styled.div`
   flex-direction: column;
   padding: 1rem;
   flex: 1;
+  align-items: center;
+`;
+
+const CardIcon = styled.img`
+  width: 36px;
 `;
 
 const CardTitle = styled.p`
