@@ -9,6 +9,7 @@ const HambMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleClick = () => {
+    document.body.style.overflow = document.body.style.overflow === 'hidden' ? 'auto' : 'hidden';
     setIsOpen((currValue) => !currValue);
   };
 
