@@ -82,7 +82,7 @@ const HambNav = styled.nav<{ show: boolean }>`
   flex-direction: column;
   background-color: #fff;
   height: 100vh;
-  width: 50%;
+  width: 60%;
   position: absolute;
   padding-top: 1rem;
   top: 0;

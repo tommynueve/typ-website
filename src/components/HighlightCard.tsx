@@ -30,6 +30,10 @@ const Container = styled.div<{ color: keyof typeof theme }>`
   display: flex;
   background-color: ${({ theme, color }) => theme[color]};
   padding: 1rem;
+  @media screen and (max-width: 1023px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const CardTextContainer = styled.div`
@@ -37,6 +41,9 @@ const CardTextContainer = styled.div`
   display: flex;
   flex-direction: column;
   color: #fff;
+  @media screen and (max-width: 1023px) {
+    text-align: center;
+  }
 `;
 
 const Title = styled.p`

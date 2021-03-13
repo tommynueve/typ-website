@@ -41,4 +41,8 @@ const Container = styled.section`
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin: 4rem 0;
+  @media screen and (max-width: 1023px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
