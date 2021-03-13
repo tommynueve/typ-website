@@ -12,6 +12,7 @@ const Container = styled.section`
   justify-content: space-evenly;
   text-align: center;
   flex-wrap: wrap;
+  padding: 1rem 0;
   @media screen and (max-width: 767px) {
     flex-direction: column;
     justify-content: center;
