@@ -1,6 +1,7 @@
 import React from 'react';
 import ColorDivider from '../components/ColorDivider';
 import Layout from '../components/Layout';
+import Contact from '../sections/Contact';
 import Heading from '../sections/Heading';
 import OurValues from '../sections/OurValues';
 import Partners from '../sections/Partners';
@@ -15,6 +16,7 @@ const IndexPage = () => {
         <ProductCategories />
         <ColorDivider color='blue' />
         <Partners />
+        <Contact />
       </main>
     </Layout>
   );

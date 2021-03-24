@@ -16,8 +16,8 @@ interface Props {
 const ColorDivider: React.FC<Props> = ({ color = 'black' }) => {
   return (
     <Container role='separator'>
-      {squaresArray.map((opacityValue) => (
-        <Square color={color} opacityValue={opacityValue.toString()}></Square>
+      {squaresArray.map((opacityValue, index) => (
+        <Square color={color} opacityValue={opacityValue.toString()} key={index}></Square>
       ))}
     </Container>
   );
