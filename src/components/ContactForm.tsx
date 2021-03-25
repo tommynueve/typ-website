@@ -50,4 +50,7 @@ const FormSubmit = styled.button`
   border: 2px solid ${({ theme }) => theme.main};
   border-radius: 2rem;
   padding: 0.5rem 2rem;
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
 `;

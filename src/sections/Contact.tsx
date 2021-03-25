@@ -21,9 +21,15 @@ export default Contact;
 const Title = styled.p`
   font-size: 2rem;
   font-weight: 900;
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
 `;
 
 const Container = styled.div`
   display: flex;
   align-items: center;
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+  }
 `;

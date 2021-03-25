@@ -33,6 +33,9 @@ const Container = styled.div`
   flex-direction: column;
   flex: 1;
   align-items: center;
+  @media screen and (max-width: 767px) {
+    margin-top: 1rem;
+  }
 `;
 
 const MethodContainer = styled.div``;
