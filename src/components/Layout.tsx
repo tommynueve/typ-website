@@ -37,9 +37,10 @@ p {
     margin: 0;
 }
 
-ol, ul {
+ol, ul, li {
   list-style: none;
 }
+
 `;
 
 const LayoutContainer = styled.div`
