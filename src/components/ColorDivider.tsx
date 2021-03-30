@@ -31,8 +31,8 @@ const Container = styled.div`
 `;
 
 const Square = styled.div<{ color: keyof typeof theme; opacityValue: string }>`
-  height: 66px;
-  width: 54px;
+  height: 50px;
+  width: 50px;
   background-color: ${({ theme, color }) => theme[color]};
   opacity: ${({ opacityValue }) => opacityValue};
 `;

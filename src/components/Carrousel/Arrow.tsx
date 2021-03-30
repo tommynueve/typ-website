@@ -30,4 +30,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  @media screen and (max-width: 1023px) {
+    display: none;
+  }
 `;

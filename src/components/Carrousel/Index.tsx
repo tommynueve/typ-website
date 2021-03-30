@@ -36,6 +36,9 @@ const CarrContainer = styled.div`
   overflow: hidden;
   position: relative;
   white-space: nowrap;
+  @media screen and (max-width: 1023px) {
+    overflow-x: scroll;
+  }
 `;
 
 const CarrList = styled.ul`

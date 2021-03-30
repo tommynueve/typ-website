@@ -22,7 +22,11 @@ const Container = styled.div`
 `;
 
 const Title = styled.p`
-  font-size: 2rem;
+  font-size: 1.5rem;
+  text-align: center;
   font-weight: 700;
   margin-bottom: 1rem;
+  @media screen and (min-width: 769px) {
+    text-align: left;
+  }
 `;
