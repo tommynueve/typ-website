@@ -1,4 +1,7 @@
 import React from 'react';
+import { ThemeProvider } from 'styled-components';
+
+import theme, { GlobalStyle } from '../theme';
 import Layout from '../components/Layout';
 import Contact from '../sections/Contact';
 import Footer from '../sections/Footer';
@@ -10,7 +13,8 @@ import Products from '../sections/Products';
 
 const IndexPage = () => {
   return (
-    <>
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
       <Layout>
         <Heading />
         <main>
@@ -22,7 +26,7 @@ const IndexPage = () => {
         </main>
       </Layout>
       <Footer />
-    </>
+    </ThemeProvider>
   );
 };
 

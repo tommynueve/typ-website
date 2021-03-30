@@ -44,7 +44,7 @@ const Heading = () => {
   const isMobile = useMediaQuery({ maxWidth: 767 });
 
   return (
-    <header>
+    <header id='heading'>
       <NavbarContainer>
         {isMobile ? (
           <HambMenu />

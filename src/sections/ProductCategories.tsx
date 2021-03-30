@@ -6,7 +6,7 @@ import TintasOCPImg from '../images/tintas-ocp.jpeg';
 
 const ProductCategories = () => {
   return (
-    <Container>
+    <Container id='products'>
       <HighlightCard
         title='Tintas OCP'
         image={TintasOCPImg}

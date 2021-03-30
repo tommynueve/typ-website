@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-scroll';
 
 import wsImg from '../images/icon-ws.svg';
 import igImg from '../images/icon-ig.svg';
@@ -22,13 +23,25 @@ const HambMenu = () => {
       <HambNav show={isOpen}>
         <ul>
           <li>
-            <HambOption>Inicio</HambOption>
+            <HambOption>
+              <Link to='heading' smooth duration={100} onClick={handleClick} offset={-16}>
+                Inicio
+              </Link>
+            </HambOption>
           </li>
           <li>
-            <HambOption>Productos</HambOption>
+            <HambOption>
+              <Link to='products' smooth duration={100} onClick={handleClick}>
+                Productos
+              </Link>
+            </HambOption>
           </li>
           <li>
-            <HambOption>Contacto</HambOption>
+            <HambOption>
+              <Link to='contact' smooth duration={100} onClick={handleClick}>
+                Contacto
+              </Link>
+            </HambOption>
           </li>
           <li>
             <HambSocialOption>

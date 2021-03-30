@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-scroll';
 
 const MenuContainer = styled.nav<Props>`
   display: flex;
@@ -14,6 +15,7 @@ const MenuButton = styled.button`
   &:first-child {
     padding-left: 0;
   }
+  cursor: pointer;
 `;
 
 interface Props {
@@ -23,9 +25,21 @@ interface Props {
 const Menu: React.FC<Props> = ({ textColor = '#000' }) => {
   return (
     <MenuContainer aria-labelledby='primary menu navigation' textColor={textColor}>
-      <MenuButton>Inicio</MenuButton>
-      <MenuButton>Productos</MenuButton>
-      <MenuButton>Contacto</MenuButton>
+      <MenuButton>
+        <Link to='heading' smooth duration={100} offset={-16}>
+          Inicio
+        </Link>
+      </MenuButton>
+      <MenuButton>
+        <Link to='products' smooth duration={100}>
+          Productos
+        </Link>
+      </MenuButton>
+      <MenuButton>
+        <Link to='contact' smooth duration={100}>
+          Contacto
+        </Link>
+      </MenuButton>
     </MenuContainer>
   );
 };

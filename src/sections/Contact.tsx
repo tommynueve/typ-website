@@ -6,7 +6,7 @@ import Map from '../components/Map';
 
 const Contact = () => {
   return (
-    <section>
+    <section id='contact'>
       <Title>Contactanos</Title>
       <Container>
         <ContactForm />
